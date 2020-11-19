@@ -3,10 +3,7 @@ import { Entity, BaseEntity, PrimaryGeneratedColumn, Column } from 'typeorm'
 @Entity('profile')
 export class ProfileEntity extends BaseEntity{
     @PrimaryGeneratedColumn()
-    id: number
-
-    // @Column()
-    // username: string
+    id: NumberConstructor
 
     @Column({ nullable: true })
     profile_picture: string
@@ -19,14 +16,5 @@ export class ProfileEntity extends BaseEntity{
 
     @Column({ nullable: true })
     city: string
-
-    @Column({ nullable: true })
-    summary: string
-
-    @Column({ nullable: true })
-    linkedin_url: string
-
-    @Column({ nullable: true})
-    github_url: string
     
 }
