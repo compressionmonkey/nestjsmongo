@@ -1,0 +1,10 @@
+server:
+  port: 3030
+
+db:
+  type: 'mysql'
+  port: 3306
+  database: 'bhutanjob' 
+
+jwt:
+  expiresIn: 3600
