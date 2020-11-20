@@ -58,7 +58,7 @@ export class UserRepository extends Repository<User> {
     const userSelected = await this.findOne({ where: { username: username } });
     if(userSelected){
       const profile = await this.profileRepo.findOne({ where: { id: userSelected.profileId } });
-      if (profile === undefined && !(await userSelected && userSelected.comparePassword(password))) {
+      if (!(await userSelected && await userSelected.comparePassword(password))) {
         throw new HttpException({
           status: HttpStatus.BAD_REQUEST,
           error: 'Invalid UserName/ Password',

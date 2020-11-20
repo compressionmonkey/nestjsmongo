@@ -10,7 +10,7 @@ import { Module } from '@nestjs/common';
             port: 3306,
             username: 'root',
             password: 'password',
-            database: 'db',
+            database: 'bhutanplus',
             entities: [__dirname + '/../**/*.entity.{js,ts}'],
             synchronize: true,
             logging: false,
